@@ -1,15 +1,31 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Spin Choices Wheel</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin Wheel App</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  
   <body>
+    <div class="input">
+      <p>Click On The Spin Button To Start</p>
+      
+      </br>
+      <form id="form1" action="/action_page.php">
+        <input type="text" id="in1" value="655"></br>
+        <input type="text" id="in2"value="Type Option 2 Here"></br>
+        <input type="text" id="in3"value="Type Option 3 Here"></br>
+        <input type="text" id="in4"value="Type Option 4 Here"></br>
+        <input type="text" id="in5"value="Type Option 5 Here"></br>
+        <input type="text" id="in6"value="Type Option 6 Here"></br>
+
+      </form>
+      
+    </div>
     <div class="wrapper">
       <div class="container">
         <canvas id="wheel"></canvas>
@@ -19,15 +35,23 @@
       <div id="final-value">
       </div>
     </div>
-    
     <!-- Chart JS -->
+    <script>
+      var display1 = 69
+      var display2 = 512
+      var option3 = 422
+      var option4 = 512
+      var option5 = 476
+      var option6 = 52
+
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    
     <!-- Chart JS Plugin for displaying text over chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
-    
+
     <!-- Script -->
+
+
     <script src="script.js"></script>
   </body>
 </html>
-
