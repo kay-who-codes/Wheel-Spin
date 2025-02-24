@@ -8,6 +8,35 @@ var display3 =document.getElementById("in3").value;
 var display4 =document.getElementById("in4").value;
 var display5 =document.getElementById("in5").value;
 var display6 =document.getElementById("in6").value;
+
+function myFunction() {
+  console.log("test")
+  
+  display1 = document.getElementById("in1").value;
+  myChart.data.labels[0] = display1
+  console.log(myChart.data.labels[0]);
+  
+  display2 = document.getElementById("in2").value;
+  myChart.data.labels[1] = display2
+  console.log(myChart.data.labels[1]);
+  
+  display3 = document.getElementById("in3").value;
+  myChart.data.labels[2] = display3
+  console.log(myChart.data.labels[2]);
+  
+  display4 = document.getElementById("in4").value;
+  myChart.data.labels[3] = display4
+  console.log(myChart.data.labels[3]);
+  
+  display5 = document.getElementById("in5").value;
+  myChart.data.labels[4] = display5
+  console.log(myChart.data.labels[4]);
+  
+  display6 = document.getElementById("in6").value;
+  myChart.data.labels[5] = display6
+  console.log(myChart.data.labels[5]);
+  
+}
 //Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
   { minDegree: 0, maxDegree: 30, value: 2 },
@@ -89,7 +118,37 @@ document.getElementById('in1').addEventListener('input', function(event) {
   myChart.data.labels[0] = display1
   console.log(myChart.data.labels[0]);
 });
+
+document.getElementById('in2').addEventListener('input', function(event) {
+  display2 = event.target.value;
+  myChart.data.labels[1] = display2
+  console.log(myChart.data.labels[1]);
+});
+
+document.getElementById('in3').addEventListener('input', function(event) {
+  display3 = event.target.value;
+  myChart.data.labels[2] = display3
+  console.log(myChart.data.labels[2]);
+});
+
+document.getElementById('in4').addEventListener('input', function(event) {
+  display4 = event.target.value;
+  myChart.data.labels[3] = display4
+  console.log(myChart.data.labels[3]);
+});
+
+document.getElementById('in5').addEventListener('input', function(event) {
+  display5 = event.target.value;
+  myChart.data.labels[4] = display5
+  console.log(myChart.data.labels[4]);
+});
   
+document.getElementById('in6').addEventListener('input', function(event) {
+  display6 = event.target.value;
+  myChart.data.labels[5] = display6
+  console.log(myChart.data.labels[5]);
+});
+
 //Start spinning
 spinBtn.addEventListener("click", () => {
   
