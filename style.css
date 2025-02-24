@@ -4,15 +4,17 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   height: 100vh;
   background: linear-gradient(135deg, #c3a3f1, #6414e9);
 }
+
 .wrapper {
   width: 90%;
   max-width: 34.37em;
   max-height: 90vh;
-  background-color: #ffffff;
+  background-color: #111111;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -21,6 +23,7 @@ body {
   border-radius: 1em;
   box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
 }
+
 .container {
   position: relative;
   width: 100%;
@@ -37,6 +40,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 #spin-btn {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -54,12 +58,14 @@ body {
   letter-spacing: 0.1em;
   font-weight: 600;
 }
+
 img {
   position: absolute;
   width: 4em;
   top: 45%;
   right: -8%;
 }
+
 #final-value {
   font-size: 1.5em;
   text-align: center;
@@ -67,10 +73,12 @@ img {
   color: #202020;
   font-weight: 500;
 }
+
 @media screen and (max-width: 768px) {
   .wrapper {
     font-size: 12px;
   }
+  
   img {
     right: -5%;
   }
