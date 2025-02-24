@@ -2,6 +2,12 @@ const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
 
+var display1 = document.getElementById("in1").value;
+var display2 =document.getElementById("in2").value;
+var display3 =document.getElementById("in3").value;
+var display4 =document.getElementById("in4").value;
+var display5 =document.getElementById("in5").value;
+var display6 =document.getElementById("in6").value;
 //Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
   { minDegree: 0, maxDegree: 30, value: 2 },
@@ -12,10 +18,8 @@ const rotationValues = [
   { minDegree: 271, maxDegree: 330, value: 3 },
   { minDegree: 331, maxDegree: 360, value: 2 },
 ];
-
 //Size of each piece
 const data = [16, 16, 16, 16, 16, 16];
-
 //background color for each piece
 var pieColors = [
   "#8b35bc",
@@ -28,40 +32,31 @@ var pieColors = [
 
 //Create chart
 let myChart = new Chart(wheel, {
-  
   //Plugin for displaying text on pie chart
   plugins: [ChartDataLabels],
-  
   //Chart Type Pie
   type: "pie",
-  
   data: {
-    
     //Labels(values which are to be displayed on chart)
-    labels: ["test", 2, 3, 4, 5, 6],
-    
+    labels: [display1, display2, display3, display4, display5, display6],
     //Settings for dataset/pie
     datasets: [
       {
         backgroundColor: pieColors,
         data: data,
-        
       },
     ],
   },
-  
   options: {
     //Responsive chart
     responsive: true,
     animation: { duration: 0 },
     plugins: {
-      
       //hide tooltip and legend
       tooltip: false,
       legend: {
         display: false,
       },
-      
       //display labels inside pie chart
       datalabels: {
         color: "#ffffff",
@@ -88,8 +83,17 @@ const valueGenerator = (angleValue) => {
 let count = 0;
 //100 rotations for animation and last rotation for result
 let resultValue = 101;
+
+document.getElementById('in1').addEventListener('input', function(event) {
+  display1 = event.target.value;
+  myChart.data.labels[0] = display1
+  console.log(myChart.data.labels[0]);
+});
+  
 //Start spinning
 spinBtn.addEventListener("click", () => {
+  
+  
   spinBtn.disabled = true;
   //Empty final value
   finalValue.innerHTML = `<p>Good Luck!</p>`;
