@@ -10,6 +10,7 @@ body {
   background: linear-gradient(135deg, #c3a3f1, #6414e9);
 }
 
+/*
 .wrapper {
   width: 90%;
   max-width: 34.37em;
@@ -23,18 +24,21 @@ body {
   border-radius: 1em;
   box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
 }
+*/
 
 .container {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 #wheel {
   max-height: inherit;
   width: inherit;
   top: 0;
   padding: 0;
 }
+
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
